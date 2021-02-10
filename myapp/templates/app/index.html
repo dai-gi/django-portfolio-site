@@ -2,17 +2,23 @@
 
 {% block content %}
 <section>
-  <img src="..." alt="ポートフォリオ画像">
-  <img src="..." alt="ポートフォリオ画像">
+  <h1>Portfolio</h1>
+  {% for post in post_data reversed %}
+  <div>
+    <img src="..." alt="ポートフォリオ画像">
+    <h5>{{ post.title }}</h5>
+    <p>{{ post.content }}</p>
+  </div>
+  {% endfor  %}
 </section>
 <nav>
+  <h1>Navigation</h1>
+  {% for post in post_data reversed %}
   <ul>
     <li>
-      <a href="">ポートフォリオ１</a>
-    </li>
-    <li>
-      <a href="">ポートフォリオ１</a>
+      <a href="">{{ post.title }}</a>
     </li>
   </ul>
+  {% endfor  %}
 </nav>
 {% endblock %}
