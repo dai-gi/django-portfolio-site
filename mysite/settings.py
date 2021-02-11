@@ -55,10 +55,10 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'django.template.context_processors.img',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
@@ -120,3 +120,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# 画像保存パスの指定
+MEDIA_ROOT = os.path.join(BASE_DIR, 'myapp/static/img')
+MEDIA_URL = '/img/'
