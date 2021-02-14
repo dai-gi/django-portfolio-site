@@ -3,9 +3,9 @@
 {% block content %}
 <section>
   <h1>Portfolio</h1>
-  {% for post in post_data reversed %}
+  {% for post in post_data reversed%}
   <div>
-    <img src="..." alt="ポートフォリオ画像">
+    <img src="{{ post.image.url }}" alt="画像">
     <h5>{{ post.title }}</h5>
     <p>{{ post.content }}</p>
   </div>
