@@ -1,4 +1,5 @@
 {% load static %}
+{% load boost %}
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -7,17 +8,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Kaushan+Script&display=swap" rel="stylesheet">
     <title>MyPortfolio</title>
   </head>
   <body>
     <nav class="navbar justify-content-center">
       <a class="navbar-brand" href="#">MyPortfolio</a>
     </nav>
-    <div class="jumbotron jumbotron-fluid d-flex flex-wrap align-content-center">
+    <div class="jumbotron jumbotron-fluid d-flex flex-wrap align-content-center m-0">
       <div class="container d-flex justify-content-center">
-        <img src="./static/img/Group 2.png" alt="アイコン画像">
+        <img src="./static/icon/Group 2.png" alt="アイコン画像">
         <div class="ml-5 align-self-center">
           <h4>name</h4>
           <p>comment</p>
@@ -25,9 +25,19 @@
       </div>
     </div>
     <main>
-      <div> {% block content %} {% endblock %} </div>
-    </main> {% block extra_js %} {% endblock %} <footer>
-      <p>&copy; 2021</p>
+      <div> 
+        <div class="container">
+          <div class="row">
+            {% block content %}
+            {% endblock %} 
+          </div>
+        </div>
+      </div>
+    </main> 
+    {% block extra_js %} 
+    {% endblock %} 
+    <footer class="d-flex align-items-center justify-content-center">
+      <h4 class="m-0">&copy; 2021</h4>
     </footer>
   </body>
 </html>

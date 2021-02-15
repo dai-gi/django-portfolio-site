@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+  font-family: 'Amatic SC', cursive;
 }
 
 main {
@@ -16,7 +17,7 @@ main {
 }
 
 .navbar {
-  font-family: 'Pacifico', cursive;
+  font-family: 'Kaushan Script', cursive;
   background-color: rgb(84, 105, 136);
 }
 
@@ -28,9 +29,18 @@ main {
   height: 75vh;
 }
 
+.items {
+  height: 36.91568vw;
+}
+
+.card {
+  width: 11vw;
+  height: 11vw;
+}
+
 .card-img {
-  width: 15vw;
-  height: 15vw;
+  width: 10vw;
+  height: 10vw;
 }
 
 footer {

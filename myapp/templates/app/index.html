@@ -1,30 +1,43 @@
 {% extends "app/base.html" %}
 
 {% block content %}
-<div class="col-6 m-5">
-  <section class="items">
-    <h1>Portfolio</h1>
-    {% for post in post_data reversed%}
-      <div class="row">
-        <div class="col-7 d-flex justify-content-center">
-          <img class="card-img rounded-circle my-5" src="{{ post.image.url }}" alt="画像">
+<div class="col-8 shadow-sm items p-0 m-2">
+  <section>
+    <div class="container">
+      <h1 class="m-5">Portfolio</h1>
+      {% for post in post_data reversed%}
+        <div class="row m-3">
+          <div class="col-6 d-flex justify-content-center p-0 m-3">
+            <div class="card rounded-circle d-flex justify-content-center align-items-center border-0 shadow-sm">
+              <img class="card-img rounded-circle shadow-sm" src="{{ post.image.url }}" alt="画像">
+            </div>
+          </div>
+          <div class="col-5 align-self-center p-0 m-2">
+            <h4>{{ post.title }}</h4>
+            <p>{{ post.content }}</p>
+          </div>
         </div>
-        <div class="col-5 text-center align-self-center">
-          <h5>{{ post.title }}</h5>
-          <p>{{ post.content }}</p>
-        </div>
-      </div>
-    {% endfor  %}
+      {% endfor  %}
+    </div>
   </section>
 </div>
-<div class="col-3 m-5">
-  <nav class="nav flex-column">
-    <h1>Navigation</h1>
-    {% for post in post_data reversed %}
-    <h4>
-      <a class="nav-link p-0 my-5" href="#">{{ post.title }}</a>
-    </h4>
-    {% endfor  %}
-  </nav>
+<div class="col-3 p-0 shadow-sm items m-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="nav flex-column">
+          <h1 class="my-5">Navigation</h1>
+          {% for post in post_data reversed %}
+          <h4>
+            <a class="nav-link p-0 my-3 text-black-50" href="#">{{ post.title }}</a>
+          </h4>
+          {% endfor  %}
+          <h3 class="mt-5">
+            <a class="text-dark" href="#">LOGIN</a>
+          </h3>
+        </nav>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
