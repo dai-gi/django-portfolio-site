@@ -1,24 +1,30 @@
 {% extends "app/base.html" %}
 
 {% block content %}
-<section>
-  <h1>Portfolio</h1>
-  {% for post in post_data reversed%}
-  <div>
-    <img src="{{ post.image.url }}" alt="画像">
-    <h5>{{ post.title }}</h5>
-    <p>{{ post.content }}</p>
-  </div>
-  {% endfor  %}
-</section>
-<nav>
-  <h1>Navigation</h1>
-  {% for post in post_data reversed %}
-  <ul>
-    <li>
-      <a href="">{{ post.title }}</a>
-    </li>
-  </ul>
-  {% endfor  %}
-</nav>
+<div class="col-6 m-5">
+  <section class="items">
+    <h1>Portfolio</h1>
+    {% for post in post_data reversed%}
+      <div class="row">
+        <div class="col-7 d-flex justify-content-center">
+          <img class="card-img rounded-circle my-5" src="{{ post.image.url }}" alt="画像">
+        </div>
+        <div class="col-5 text-center align-self-center">
+          <h5>{{ post.title }}</h5>
+          <p>{{ post.content }}</p>
+        </div>
+      </div>
+    {% endfor  %}
+  </section>
+</div>
+<div class="col-3 m-5">
+  <nav class="nav flex-column">
+    <h1>Navigation</h1>
+    {% for post in post_data reversed %}
+    <h4>
+      <a class="nav-link p-0 my-5" href="#">{{ post.title }}</a>
+    </h4>
+    {% endfor  %}
+  </nav>
+</div>
 {% endblock %}
