@@ -17,7 +17,7 @@ main {
 
 .navbar {
   font-family: 'Pacifico', cursive;
-  background-color: rgb(128, 176, 255);
+  background-color: rgb(84, 105, 136);
 }
 
 .navbar-brand {
@@ -26,4 +26,15 @@ main {
 
 .jumbotron {
   height: 75vh;
+}
+
+.card-img {
+  width: 15vw;
+  height: 15vw;
+}
+
+footer {
+  height: 8vh;
+  color: #f6f6f6;
+  background-color: rgb(84, 105, 136);
 }
