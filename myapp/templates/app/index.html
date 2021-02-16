@@ -6,10 +6,10 @@
     <div class="container">
       <h1 class="m-5">Portfolio</h1>
       {% for post in post_data reversed%}
-        <div class="row m-3">
+        <div class="row m-5">
           <div class="col-6 d-flex justify-content-center p-0 m-3">
             <div class="card rounded-circle d-flex justify-content-center align-items-center border-0 shadow-sm">
-              <img class="card-img rounded-circle shadow-sm" src="{{ post.image.url }}" alt="画像">
+              <img class="card-img rounded-circle" src="{{ post.image.url }}" alt="画像">
             </div>
           </div>
           <div class="col-5 align-self-center p-0 m-2">
