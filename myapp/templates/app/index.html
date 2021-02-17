@@ -1,5 +1,20 @@
 {% extends "app/base.html" %}
 
+{% block header %}
+<nav class="navbar justify-content-center">
+  <a class="navbar-brand" href="#">MyPortfolio</a>
+</nav>
+<div class="jumbotron jumbotron-fluid d-flex flex-wrap align-content-center m-0">
+  <div class="container d-flex justify-content-center">
+    <img src="./static/icon/Group 2.png" alt="アイコン画像">
+    <div class="ml-5 align-self-center">
+      <h4>name</h4>
+      <p>comment</p>
+    </div>
+  </div>
+</div>
+{% endblock %} 
+
 {% block content %}
 <div class="col-8 shadow-sm items p-0 m-2">
   <section>
@@ -9,7 +24,9 @@
         <div class="row m-5">
           <div class="col-6 d-flex justify-content-center p-0 m-3">
             <div class="card rounded-circle d-flex justify-content-center align-items-center border-0 shadow-sm">
-              <img class="card-img rounded-circle" src="{{ post.image.url }}" alt="画像">
+              <a href="/">
+                <img class="card-img rounded-circle" src="{{ post.image.url }}" alt="画像">
+              </a>
             </div>
           </div>
           <div class="col-5 align-self-center p-0 m-2">
@@ -35,9 +52,18 @@
           <h3 class="mt-5">
             <a class="text-dark" href="#">LOGIN</a>
           </h3>
+          <h3 class="mt-5">
+            <a class="text-dark" href="{% url 'post_new' %}">POST</a>
+          </h3>
         </nav>
       </div>
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block footer %}
+<footer class="d-flex align-items-center justify-content-center">
+  <h4 class="m-0">&copy; 2021</h4>
+</footer>
 {% endblock %}
