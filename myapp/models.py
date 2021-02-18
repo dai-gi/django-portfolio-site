@@ -11,7 +11,7 @@ class Post(models.Model):
 
 
 class Icon(models.Model):
-    image = models.ImageField('イメージ画像', upload_to='img', null=True, blank=True)
+    image = models.ImageField('イメージ画像', upload_to='icon', null=True, blank=True)
     name = models.CharField("タイトル", max_length=20)
     comment = models.TextField("内容")
 
