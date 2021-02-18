@@ -6,15 +6,15 @@
     <h2 class="my-4">{{ post_data.title }}</h2>
     <hr>
     {% if post_data.image %}
-        <img class="rounded detail-img" src="{{ post_data.image.url }}" alt="投稿画像">        
+        <img class="rounded detail-img h-50 w-100" src="{{ post_data.image.url }}" alt="投稿画像">        
         <hr>
     {% endif %}
     <div class="mb-5">
         <p>{{ post_data.content|linebreaksbr }}</p>
-            <hr>
-            <div class="d-flex">
-                <a class="btn btn-warning mr-2" href="/">編集する</a>
-                <a class="btn btn-danger" href="/">削除する</a>    
-            </div>
+          <hr>
+          <div class="d-flex">
+              <a class="btn btn-warning mr-2" href="/">編集する</a>
+              <a class="btn btn-danger mr-2" href="/">削除する</a>
+          </div>
     </div>
 {% endblock %}

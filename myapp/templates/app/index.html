@@ -30,7 +30,7 @@
           <div class="col-5 align-self-center p-0 m-2">
             <h4>{{ post.title }}</h4>
             <p>{{ post.content }}</p>
-            <a href="{% url 'post_detail' post.id %}">詳細画面</a>
+            <a class="btn btn-warning text-black-50" href="{% url 'post_detail' post.id %}">詳細画面</a>
           </div>
         </div>
       {% endfor  %}
