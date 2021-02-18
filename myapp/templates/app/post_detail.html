@@ -13,8 +13,9 @@
         <p>{{ post_data.content|linebreaksbr }}</p>
           <hr>
           <div class="d-flex">
-              <a class="btn btn-warning mr-2" href="/">編集する</a>
-              <a class="btn btn-danger mr-2" href="/">削除する</a>
+              <a class="btn btn-warning mr-2 text-black-50" href="{% url 'post_edit' post_data.id %}">編集する</a>
+              <a class="btn btn-danger mr-2" href="{% url 'post_delete' post_data.id %}">削除する</a>
+              <a class="btn btn-secondary" href="/">トップページ</a>
           </div>
     </div>
 {% endblock %}
