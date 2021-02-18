@@ -1,0 +1,20 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+<div class="col-12 d-flex justify-content-center align-content-cente my-5  ">
+  <div class="col-6 my-5">
+    <h2 class="my-4">{{ post_data.title }}</h2>
+    <hr>
+    {% if post_data.image %}
+        <img class="rounded detail-img" src="{{ post_data.image.url }}" alt="投稿画像">        
+        <hr>
+    {% endif %}
+    <div class="mb-5">
+        <p>{{ post_data.content|linebreaksbr }}</p>
+            <hr>
+            <div class="d-flex">
+                <a class="btn btn-warning mr-2" href="/">編集する</a>
+                <a class="btn btn-danger" href="/">削除する</a>    
+            </div>
+    </div>
+{% endblock %}
