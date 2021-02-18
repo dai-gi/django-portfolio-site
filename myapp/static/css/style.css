@@ -5,11 +5,11 @@
 }
 
 body {
-  background: #f6f6f6;
+  background: #fff;
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Yusei Magic', sans-serif;
 }
 
 main {
@@ -18,33 +18,29 @@ main {
 
 .navbar {
   font-family: 'Kaushan Script', cursive;
-  background-color: rgb(84, 105, 136);
+  background-color: #6b809c;
 }
 
 .navbar-brand {
-  color: #f6f6f6;
+  color: #fff;
 }
 
 .jumbotron {
   height: 75vh;
 }
 
-.items {
-  height: 36.91568vw;
-}
-
 .card {
-  width: 11vw;
+  width: 9vw;
   height: 11vw;
 }
 
 .card-img {
-  width: 10vw;
-  height: 10vw;
+  width: 9vw;
+  height: 11vw;
 }
 
 footer {
   height: 8vh;
-  color: #f6f6f6;
-  background-color: rgb(84, 105, 136);
+  color: #ffffff;
+  background-color: #6b809c;
 }

@@ -122,5 +122,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # 画像保存パスの指定
-MEDIA_ROOT = os.path.join(BASE_DIR, 'myapp/static')
-MEDIA_URL = './static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'myapp/image')
+MEDIA_URL = '/image/'
